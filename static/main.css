@@ -1,0 +1,160 @@
+html{
+  background-color: #100f17;
+  overflow-x: hidden;
+}
+
+*{
+  font-family: 'Ubuntu', sans-serif;
+}
+
+h5{
+  color:gray;
+}
+
+.mutetext{
+  position: absolute;
+  bottom: 60px;
+  right: 300px;
+  padding: 0;
+  margin: 0;
+}
+
+#messages{
+  padding: 0px;
+  color:white;
+  position: absolute;
+  bottom: 170px;
+  margin-left: 10px;
+  z-index: -999;
+}
+
+h1{
+  padding: 0px;
+  color: white;
+  margin-top: -50px;
+}
+
+.header{
+  width: 100%;
+  position: fixed;
+  left:0;
+  top:0;
+  height:100px;
+  background-color: #100f17;
+  z-index: -100;
+}
+
+.bar{
+  background-image: linear-gradient(to right, orange , purple);
+  height:5px;
+  width:100%;
+  margin: 0px;
+  padding: 0px;
+  position: absolute;
+  margin-top: 60px;
+  left: 0;
+}
+
+.lglobe{
+  width:50px;
+  height:50px;
+  padding: 0;
+  margin-left: 20px;
+  margin-top: 3px;
+}
+
+
+.topGradient{
+    height: 200px;
+    width: 100%;
+    background-image:linear-gradient(rgba(16, 15, 23, 1), rgba(16, 15, 23, 0.01));
+    position: fixed;
+    top:70px;
+    left:0;
+    z-index: -100;
+    padding: 0px;
+    margin: 0px;
+}
+
+.rightbar{
+  background-color: purple;
+  height:40px;
+  width:10px;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  float:right;
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+  margin-top: 43px;
+  margin-right: -10px;
+}
+
+.leftbar{
+  background-color: orange;
+  height:40px;
+  width:10px;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  float:left;
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+  margin-top: 43px;
+  margin-left: -10px;
+}
+
+.content{
+  max-width: 1000px;
+  margin: auto;
+}
+
+p{
+  padding: 0px;
+  margin: 10px;
+  color:white;
+}
+
+input{
+  border-radius: 20px;
+  height: 30px;
+  background-color:rgba(0, 0, 0, 0);
+  border-color: white;
+  border-style: solid;
+  color:white;
+  padding-left: 10px;
+  width: 900px;
+}
+
+input:focus{
+  outline-width: 0;
+  background-color: #1d1d1d;
+}
+
+button{
+  border-radius: 20px;
+  margin-left: 10px;
+  background-color:rgba(0, 0, 0, 0);
+  border-color: white;
+  border-style: solid;
+  color: white;
+}
+
+button:focus{
+  outline-width: 0;
+}
+
+button:hover{
+  background-color: #1d1d1d
+}
+
+button:active{
+  background-color: white;
+}
+
+
+.sendy{
+  position: absolute;
+  bottom: 100px;
+  display: flex;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Chat Room</title>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.8/socket.io.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+		<link rel= "stylesheet" type= "text/css" href= "../static/main.css">
+	</head>
+	<body>
+		<div class='topGradient'></div>
+		<div class='header'></div>
+		<div class='bar'></div>
+		<div class='rightbar'></div>
+		<img src='../static/globe.png' class='lglobe'>
+		<div class='leftbar'></div>
+
+		<div class='content'>
+			<h1>Public Messenger</h1>
+		<script type="text/javascript">
+		$(document).ready(function() {
+
+				var socket = io.connect('https://flaskmsg.herokuapp.com');
+
+				socket.on('connect', function() {
+					socket.send('--> User has connected!');
+				});
+
+				socket.on('message', function(msg) {
+					$("#messages").append('<p>'+msg+'</p>');
+					console.log('Received message');
+				});
+
+				$('#sendbutton').on('click', function() {
+					socket.send($('#myMessage').val());
+					$('#myMessage').val('');
+				});
+
+			});
+		</script>
+		<div id="messages">
+			{% for msg in messages %}
+				<p>{{ msg.message }}</p>
+			{% endfor %}
+		</div>
+		<div class='sendy'>
+		<input type="text" id="myMessage">
+		<button id="sendbutton" class='sendbutton'>SEND</button>
+
+	</div>
+<div class='mutetext'>
+	<h5>messages are wiped at midnight everyday</h5>
+</div>
+</div>
+	</body>
+</html>
