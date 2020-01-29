@@ -1,2 +1,2 @@
 env
-chat.db
+db.sqlite3
