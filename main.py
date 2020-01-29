@@ -5,6 +5,7 @@ from better_profanity import profanity
 
 
 app = Flask(__name__)
+CORS(app)
 app.config['SECRET_KEY'] = '3432j5njkbn//bnksfg'
 socketio = SocketIO(app)
 
