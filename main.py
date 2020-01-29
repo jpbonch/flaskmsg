@@ -5,10 +5,10 @@ from better_profanity import profanity
 
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = '3432j5njkbnbnksfg'
+app.config['SECRET_KEY'] = '3432j5njkbn//bnksfg'
 socketio = SocketIO(app)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///chat.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite3'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
