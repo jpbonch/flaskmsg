@@ -9,8 +9,8 @@ app.config['SECRET_KEY'] = '3432j5njkbnbnksfg'
 socketio = SocketIO(app)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///chat.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
-SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 class History(db.Model):
     id = db.Column('id', db.Integer, primary_key=True)
