@@ -12,9 +12,8 @@ h5{
 }
 
 .mutetext{
-  position: absolute;
-  bottom: 60px;
-  right: 300px;
+  position: fixed;
+  bottom: 50px;
   padding: 0;
   margin: 0;
 }

@@ -17,7 +17,7 @@
 		<div class='leftbar'></div>
 
 		<div class='content'>
-			<h1>Public Messenger</h1>
+			<h1>Public Chat Room</h1>
 		<script type="text/javascript">
 		$(document).ready(function() {
 
@@ -46,6 +46,14 @@
 		</div>
 		<div class='sendy'>
 		<input type="text" id="myMessage">
+		<script type='text/javascript'>
+		var input = document.getElementById("myMessage");
+		input.addEventListener('keydown',function(event) {
+			if (event.keyCode === 13) {
+				document.getElementById('sendbutton').click();
+			}
+		});
+		</script>
 		<button id="sendbutton" class='sendbutton'>SEND</button>
 
 	</div>
