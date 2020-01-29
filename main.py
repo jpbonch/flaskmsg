@@ -2,6 +2,7 @@ from flask import Flask, render_template
 from flask_socketio import SocketIO, send
 from flask_sqlalchemy import SQLAlchemy
 from better_profanity import profanity
+from flask_cors import CORS
 
 
 app = Flask(__name__)
