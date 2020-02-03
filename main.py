@@ -4,7 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 from better_profanity import profanity
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = '3432j5njkbn//bnksfg'
+app.config['SECRET_KEY'] = os.getenv('FLASKMSG_KEY')
 socketio = SocketIO(app, cors_allowed_origins="*")
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite3'
